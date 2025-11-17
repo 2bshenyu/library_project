@@ -12,18 +12,7 @@ from library import Library
 import logging
 
 
-@pytest.fixture
-def empty_lib():
-    """一个空的图书馆实例，用于隔离测试。"""
-    return Library()
-
-
-@pytest.fixture
-def lib_with_one_book():
-    """一个包含一本书的图书馆实例（用于测试的最小状态）。"""
-    lib = Library()
-    lib.add_book("Python Basics", "Alice Author","编程")
-    return lib
+# Fixtures `empty_lib` and `lib_with_one_book` are provided by `conftest.py` (db-backed fixtures).
 
 
 def test_add_book_success(empty_lib):
@@ -175,3 +164,18 @@ def test_borrow_book_unknown_user(lib_with_one_book):
     msg = lib_with_one_book.borrow_book("nonexistent_user", "Python Basics")
     assert "Error" in msg
     assert "User" in msg or "not found" in msg
+
+
+def test_data_persistence(db_lib):
+    """验证数据在程序退出（模拟实例销毁）后，通过重新加载数据库文件仍然存在。"""
+    # 添加一本书并关闭库
+    assert db_lib.add_book("Persist Book", "Persist Author", "测试")
+    db_path = db_lib.db_path
+    db_lib.close()
+
+    # 重新打开同一个数据库文件，验证书仍然存在
+    lib2 = Library(db_path=db_path)
+    results = lib2.search_book("Persist")
+    assert len(results) == 1
+    assert results[0]["title"] == "Persist Book"
+    lib2.close()

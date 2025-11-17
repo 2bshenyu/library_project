@@ -3,3 +3,973 @@
 2025-11-17 18:40:31 INFO library: Added user 'default_user'
 2025-11-17 18:41:06 INFO library: Added book '软件工程' by '徐浩然' in category '编程'
 2025-11-17 18:41:22 INFO library: Removed book '软件工程'
+2025-11-17 19:31:14 INFO library: Added book 'Test Book' by 'Test Author' in category '文学'
+2025-11-17 19:31:14 INFO library: Added book 'Duplicate' by 'Author' in category '文学'
+2025-11-17 19:31:14 ERROR library: Add failed: duplicate title 'Duplicate'
+2025-11-17 19:31:14 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:31:14 INFO library: Removed book 'Python Basics'
+2025-11-17 19:31:14 ERROR library: Remove failed: 'Non Existent' not found
+2025-11-17 19:31:14 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:31:14 INFO library: Search performed: title='Python' author='None' category='None' -> 1 results
+2025-11-17 19:31:14 INFO library: Search performed: title='Nothing' author='None' category='None' -> 0 results
+2025-11-17 19:31:14 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:31:14 INFO library: Added user 'user1'
+2025-11-17 19:31:14 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:31:14 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:31:14 INFO library: Added user 'user1'
+2025-11-17 19:31:14 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:31:14 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='user1')
+2025-11-17 19:31:14 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:31:14 INFO library: Added user 'user1'
+2025-11-17 19:31:14 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:31:14 INFO library: User 'user1' returned 'Python Basics'
+2025-11-17 19:31:14 INFO library: Added user 'user1'
+2025-11-17 19:31:14 ERROR library: Return failed: 'Some Book' not found or not borrowed (user='user1')
+2025-11-17 19:31:14 INFO library: Added book 'Available' by 'Author' in category '文学'
+2025-11-17 19:31:14 INFO library: Added book 'Log Book' by 'Logger' in category '测试'
+2025-11-17 19:31:14 ERROR library: Remove failed: 'Non Existent Book' not found
+2025-11-17 19:31:14 INFO library: Added book 'Book A' by 'Author A' in category '文学'
+2025-11-17 19:31:14 INFO library: Added book 'Book B' by 'Author B' in category '科技'
+2025-11-17 19:31:14 INFO library: Added book 'Book C' by 'Author C' in category '文学'
+2025-11-17 19:31:14 INFO library: Filter by category: '文学' -> 2 results
+2025-11-17 19:31:14 INFO library: Added book 'Book A' by 'Author A' in category '文学'
+2025-11-17 19:31:14 INFO library: Filter by category: '科技' -> 0 results
+2025-11-17 19:31:14 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:31:14 INFO library: Added user 'alice'
+2025-11-17 19:31:14 INFO library: User 'alice' borrowed 'Python Basics'
+2025-11-17 19:31:14 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:31:14 ERROR library: Borrow failed: user 'nonexistent_user' not found (title='Python Basics')
+2025-11-17 19:31:14 INFO library: Added book 'Persist Book' by 'Persist Author' in category '测试'
+2025-11-17 19:31:14 INFO library: Search performed: title='Persist' author='None' category='None' -> 1 results
+2025-11-17 19:40:03 INFO library: Added book 'Test Book' by 'Test Author' in category '文学'
+2025-11-17 19:40:03 INFO library: Added book 'Duplicate' by 'Author' in category '文学'
+2025-11-17 19:40:03 ERROR library: Add failed: duplicate title 'Duplicate'
+2025-11-17 19:40:03 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:40:03 INFO library: Removed book 'Python Basics'
+2025-11-17 19:40:03 ERROR library: Remove failed: 'Non Existent' not found
+2025-11-17 19:40:03 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:40:03 INFO library: Search performed: title='Python' author='None' category='None' -> 1 results
+2025-11-17 19:40:03 INFO library: Search performed: title='Nothing' author='None' category='None' -> 0 results
+2025-11-17 19:40:03 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:40:03 INFO library: Added user 'user1'
+2025-11-17 19:40:03 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:40:03 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:40:03 INFO library: Added user 'user1'
+2025-11-17 19:40:03 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:40:03 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='user1')
+2025-11-17 19:40:03 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:40:03 INFO library: Added user 'user1'
+2025-11-17 19:40:03 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:40:03 INFO library: User 'user1' returned 'Python Basics'
+2025-11-17 19:40:03 INFO library: Added user 'user1'
+2025-11-17 19:40:03 ERROR library: Return failed: 'Some Book' not found or not borrowed (user='user1')
+2025-11-17 19:40:03 INFO library: Added book 'Available' by 'Author' in category '文学'
+2025-11-17 19:40:03 INFO library: Added book 'Log Book' by 'Logger' in category '测试'
+2025-11-17 19:40:03 ERROR library: Remove failed: 'Non Existent Book' not found
+2025-11-17 19:40:03 INFO library: Added book 'Book A' by 'Author A' in category '文学'
+2025-11-17 19:40:03 INFO library: Added book 'Book B' by 'Author B' in category '科技'
+2025-11-17 19:40:03 INFO library: Added book 'Book C' by 'Author C' in category '文学'
+2025-11-17 19:40:03 INFO library: Filter by category: '文学' -> 2 results
+2025-11-17 19:40:03 INFO library: Added book 'Book A' by 'Author A' in category '文学'
+2025-11-17 19:40:03 INFO library: Filter by category: '科技' -> 0 results
+2025-11-17 19:40:03 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:40:03 INFO library: Added user 'alice'
+2025-11-17 19:40:03 INFO library: User 'alice' borrowed 'Python Basics'
+2025-11-17 19:40:03 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:40:03 ERROR library: Borrow failed: user 'nonexistent_user' not found (title='Python Basics')
+2025-11-17 19:40:03 INFO library: Added book 'Persist Book' by 'Persist Author' in category '测试'
+2025-11-17 19:40:03 INFO library: Search performed: title='Persist' author='None' category='None' -> 1 results
+2025-11-17 19:40:22 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:40:22 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:40:22 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:40:22 INFO library: Added book 'New Book' by 'Dave' in category '神话'
+2025-11-17 19:40:22 INFO library: Search performed: title='New' author='None' category='None' -> 1 results
+2025-11-17 19:40:22 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:40:22 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:40:22 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:40:22 INFO library: Added book 'Temp Book' by 'Eve' in category '科技'
+2025-11-17 19:40:22 INFO library: Added user 'user1'
+2025-11-17 19:40:22 INFO library: User 'user1' borrowed 'Temp Book'
+2025-11-17 19:40:22 INFO library: User 'user1' returned 'Temp Book'
+2025-11-17 19:40:22 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:40:22 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:40:22 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:40:22 INFO library: Search performed: title='Python' author='None' category='None' -> 2 results
+2025-11-17 19:40:22 INFO library: Removed book 'Python Basics'
+2025-11-17 19:40:22 INFO library: Search performed: title='Python' author='None' category='None' -> 1 results
+2025-11-17 19:40:22 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:40:22 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:40:22 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:40:22 INFO library: Added user 'user1'
+2025-11-17 19:40:22 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:40:22 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='user1')
+2025-11-17 19:40:22 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:40:22 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:40:22 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:40:22 INFO library: Filter by category: '编程' -> 3 results
+2025-11-17 19:40:22 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:40:22 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:40:22 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:40:22 INFO library: Search performed: title='Python' author='Alice' category='编程' -> 1 results
+2025-11-17 19:40:22 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:40:22 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:40:22 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:40:22 INFO library: Search performed: title='Python' author='NonExistentAuthor' category='None' -> 0 results
+2025-11-17 19:40:22 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:40:22 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:40:22 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:40:22 INFO library: Added user 'alice'
+2025-11-17 19:40:22 INFO library: Added user 'bob'
+2025-11-17 19:40:22 INFO library: User 'alice' borrowed 'Python Basics'
+2025-11-17 19:40:22 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='bob')
+2025-11-17 19:40:22 INFO library: User 'alice' returned 'Python Basics'
+2025-11-17 19:40:22 INFO library: User 'bob' borrowed 'Python Basics'
+2025-11-17 19:40:22 INFO library: Added book 'Book!' by 'Author' in category '小说'
+2025-11-17 19:40:22 INFO library: Added book 'Book?' by 'Author' in category '小说'
+2025-11-17 19:40:22 INFO library: Search performed: title='Book!' author='None' category='None' -> 1 results
+2025-11-17 19:40:22 INFO library: Added book 'Book#$%^&*()' by 'Author' in category '文学'
+2025-11-17 19:40:22 INFO library: Search performed: title='#$%' author='None' category='None' -> 1 results
+2025-11-17 19:40:22 ERROR library: Add failed: title/author exceed max length (title=100, author=300)
+2025-11-17 19:40:22 INFO library: Added book 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' by 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB' in category 'CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC'
+2025-11-17 19:40:22 INFO library: Search performed: title='AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' author='None' category='None' -> 1 results
+2025-11-17 19:40:22 INFO library: Added book 'Python Book' by 'Author' in category '科技'
+2025-11-17 19:40:22 INFO library: Added book 'python book' by 'Different Author' in category 'adasdaDD'
+2025-11-17 19:40:22 INFO library: Added book 'Python Programming' by 'Author' in category '科技'
+2025-11-17 19:40:22 INFO library: Search performed: title='python' author='None' category='None' -> 1 results
+2025-11-17 19:40:22 INFO library: Search performed: title='PYTHON' author='None' category='None' -> 1 results
+2025-11-17 19:40:22 INFO library: Search performed: title='Programming' author='None' category='None' -> 1 results
+2025-11-17 19:40:22 INFO library: Search performed: title='programming' author='None' category='None' -> 1 results
+2025-11-17 19:40:22 INFO library: Added book 'Test Book' by 'Author' in category '文学'
+2025-11-17 19:40:22 ERROR library: Add failed: duplicate title 'Test Book'
+2025-11-17 19:40:22 INFO library: Added user 'user1'
+2025-11-17 19:40:22 INFO library: User 'user1' borrowed 'Test Book'
+2025-11-17 19:40:22 ERROR library: Borrow failed: 'Test Book' not found or already borrowed (user='user1')
+2025-11-17 19:40:22 INFO library: User 'user1' returned 'Test Book'
+2025-11-17 19:40:22 ERROR library: Return failed: 'Test Book' not found or not borrowed (user='user1')
+2025-11-17 19:40:22 INFO library: Removed book 'Test Book'
+2025-11-17 19:40:22 ERROR library: Remove failed: 'Test Book' not found
+2025-11-17 19:40:22 INFO library: Added book 'Python Programming' by 'Author' in category '科技'
+2025-11-17 19:40:22 INFO library: Added book 'Java Programming' by 'Author' in category '科技'
+2025-11-17 19:40:22 INFO library: Added book 'Python Basics' by 'Author' in category '科技'
+2025-11-17 19:40:22 INFO library: Search performed: title='Python' author='None' category='None' -> 2 results
+2025-11-17 19:40:22 INFO library: Search performed: title='Programming' author='None' category='None' -> 2 results
+2025-11-17 19:40:22 INFO library: Search performed: title='Basic' author='None' category='None' -> 1 results
+2025-11-17 19:40:22 INFO library: Added book 'Book1' by 'Author1' in category 'categroy1'
+2025-11-17 19:40:22 INFO library: Added book 'Book2' by 'Author2' in category 'categroy2'
+2025-11-17 19:40:22 INFO library: Added user 'user1'
+2025-11-17 19:40:22 INFO library: User 'user1' borrowed 'Book1'
+2025-11-17 19:40:22 INFO library: User 'user1' returned 'Book1'
+2025-11-17 19:40:22 INFO library: Removed book 'Book2'
+2025-11-17 19:40:22 INFO library: Added book 'The Great Gatsby' by 'F. Scott Fitzgerald' in category '文学'
+2025-11-17 19:40:22 INFO library: Search performed: title='Gatsby' author='None' category='None' -> 1 results
+2025-11-17 19:40:22 INFO library: Added user 'default_user'
+2025-11-17 19:40:22 INFO library: Added book 'Test Book' by 'Author' in category 'science'
+2025-11-17 19:40:22 INFO library: Added user 'default_user'
+2025-11-17 19:40:22 INFO library: Added book 'Borrowable' by 'Writer' in category 'None'
+2025-11-17 19:40:22 INFO library: User 'default_user' borrowed 'Borrowable'
+2025-11-17 19:40:22 INFO library: User 'default_user' returned 'Borrowable'
+2025-11-17 19:40:22 INFO library: Added user 'default_user'
+2025-11-17 19:40:22 INFO library: Search performed: title='Nothing' author='None' category='None' -> 0 results
+2025-11-17 19:40:22 INFO library: Added user 'default_user'
+2025-11-17 19:40:22 INFO library: Added book 'Book1' by 'A1' in category 'None'
+2025-11-17 19:40:22 INFO library: Added book 'Book2' by 'A2' in category 'None'
+2025-11-17 19:40:22 INFO library: Search performed: title='Book' author='None' category='None' -> 2 results
+2025-11-17 19:40:22 INFO library: User 'default_user' borrowed 'Book1'
+2025-11-17 19:40:22 INFO library: Added user 'default_user'
+2025-11-17 19:40:22 INFO library: Added book '软件工程' by '徐浩然' in category '编程'
+2025-11-17 19:40:22 INFO library: Added book 'The Great Gatsby' by 'F. Scott Fitzgerald' in category '小说'
+2025-11-17 19:40:22 INFO library: Added user 'default_user'
+2025-11-17 19:40:22 INFO library: Added book 'Book A' by 'Author A' in category 'Fiction'
+2025-11-17 19:40:22 INFO library: Added book 'Book B' by 'Author B' in category 'Science'
+2025-11-17 19:40:22 INFO library: Added book 'Book C' by 'Author C' in category 'Fiction'
+2025-11-17 19:40:22 INFO library: Added user 'default_user'
+2025-11-17 19:40:22 INFO library: Added book 'DelBook' by 'AuthorD' in category '分类'
+2025-11-17 19:40:22 INFO library: Removed book 'DelBook'
+2025-11-17 19:40:22 INFO library: Added user 'default_user'
+2025-11-17 19:40:22 INFO library: Added book 'KeepBook' by 'AuthorK' in category '分类'
+2025-11-17 19:40:22 INFO library: Remove cancelled by user for 'KeepBook'
+2025-11-17 19:40:23 INFO library: Added book 'Test Book' by 'Test Author' in category '文学'
+2025-11-17 19:40:23 INFO library: Added book 'Duplicate' by 'Author' in category '文学'
+2025-11-17 19:40:23 ERROR library: Add failed: duplicate title 'Duplicate'
+2025-11-17 19:40:23 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:40:23 INFO library: Removed book 'Python Basics'
+2025-11-17 19:40:23 ERROR library: Remove failed: 'Non Existent' not found
+2025-11-17 19:40:23 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:40:23 INFO library: Search performed: title='Python' author='None' category='None' -> 1 results
+2025-11-17 19:40:23 INFO library: Search performed: title='Nothing' author='None' category='None' -> 0 results
+2025-11-17 19:40:23 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:40:23 INFO library: Added user 'user1'
+2025-11-17 19:40:23 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:40:23 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:40:23 INFO library: Added user 'user1'
+2025-11-17 19:40:23 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:40:23 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='user1')
+2025-11-17 19:40:23 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:40:23 INFO library: Added user 'user1'
+2025-11-17 19:40:23 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:40:23 INFO library: User 'user1' returned 'Python Basics'
+2025-11-17 19:40:23 INFO library: Added user 'user1'
+2025-11-17 19:40:23 ERROR library: Return failed: 'Some Book' not found or not borrowed (user='user1')
+2025-11-17 19:40:23 INFO library: Added book 'Available' by 'Author' in category '文学'
+2025-11-17 19:40:23 INFO library: Added book 'Log Book' by 'Logger' in category '测试'
+2025-11-17 19:40:23 ERROR library: Remove failed: 'Non Existent Book' not found
+2025-11-17 19:40:23 INFO library: Added book 'Book A' by 'Author A' in category '文学'
+2025-11-17 19:40:23 INFO library: Added book 'Book B' by 'Author B' in category '科技'
+2025-11-17 19:40:23 INFO library: Added book 'Book C' by 'Author C' in category '文学'
+2025-11-17 19:40:23 INFO library: Filter by category: '文学' -> 2 results
+2025-11-17 19:40:23 INFO library: Added book 'Book A' by 'Author A' in category '文学'
+2025-11-17 19:40:23 INFO library: Filter by category: '科技' -> 0 results
+2025-11-17 19:40:23 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:40:23 INFO library: Added user 'alice'
+2025-11-17 19:40:23 INFO library: User 'alice' borrowed 'Python Basics'
+2025-11-17 19:40:23 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:40:23 ERROR library: Borrow failed: user 'nonexistent_user' not found (title='Python Basics')
+2025-11-17 19:40:23 INFO library: Added book 'Persist Book' by 'Persist Author' in category '测试'
+2025-11-17 19:40:23 INFO library: Search performed: title='Persist' author='None' category='None' -> 1 results
+2025-11-17 19:41:21 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:41:21 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:41:21 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:41:21 INFO library: Added book 'New Book' by 'Dave' in category '神话'
+2025-11-17 19:41:21 INFO library: Search performed: title='New' author='None' category='None' -> 1 results
+2025-11-17 19:41:21 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:41:21 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:41:21 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:41:21 INFO library: Added book 'Temp Book' by 'Eve' in category '科技'
+2025-11-17 19:41:21 INFO library: Added user 'user1'
+2025-11-17 19:41:21 INFO library: User 'user1' borrowed 'Temp Book'
+2025-11-17 19:41:21 INFO library: User 'user1' returned 'Temp Book'
+2025-11-17 19:41:21 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:41:21 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:41:21 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:41:21 INFO library: Search performed: title='Python' author='None' category='None' -> 2 results
+2025-11-17 19:41:21 INFO library: Removed book 'Python Basics'
+2025-11-17 19:41:21 INFO library: Search performed: title='Python' author='None' category='None' -> 1 results
+2025-11-17 19:41:21 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:41:21 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:41:21 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:41:21 INFO library: Added user 'user1'
+2025-11-17 19:41:21 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:41:21 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='user1')
+2025-11-17 19:41:21 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:41:21 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:41:21 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:41:21 INFO library: Filter by category: '编程' -> 3 results
+2025-11-17 19:41:21 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:41:21 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:41:21 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:41:21 INFO library: Search performed: title='Python' author='Alice' category='编程' -> 1 results
+2025-11-17 19:41:21 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:41:21 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:41:21 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:41:21 INFO library: Search performed: title='Python' author='NonExistentAuthor' category='None' -> 0 results
+2025-11-17 19:41:21 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:41:21 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:41:21 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:41:21 INFO library: Added user 'alice'
+2025-11-17 19:41:21 INFO library: Added user 'bob'
+2025-11-17 19:41:21 INFO library: User 'alice' borrowed 'Python Basics'
+2025-11-17 19:41:21 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='bob')
+2025-11-17 19:41:21 INFO library: User 'alice' returned 'Python Basics'
+2025-11-17 19:41:21 INFO library: User 'bob' borrowed 'Python Basics'
+2025-11-17 19:41:21 INFO library: Added book 'Book!' by 'Author' in category '小说'
+2025-11-17 19:41:21 INFO library: Added book 'Book?' by 'Author' in category '小说'
+2025-11-17 19:41:21 INFO library: Search performed: title='Book!' author='None' category='None' -> 1 results
+2025-11-17 19:41:21 INFO library: Added book 'Book#$%^&*()' by 'Author' in category '文学'
+2025-11-17 19:41:21 INFO library: Search performed: title='#$%' author='None' category='None' -> 1 results
+2025-11-17 19:41:21 ERROR library: Add failed: title/author exceed max length (title=100, author=300)
+2025-11-17 19:41:21 INFO library: Added book 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' by 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB' in category 'CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC'
+2025-11-17 19:41:21 INFO library: Search performed: title='AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' author='None' category='None' -> 1 results
+2025-11-17 19:41:21 INFO library: Added book 'Python Book' by 'Author' in category '科技'
+2025-11-17 19:41:21 ERROR library: Add failed: duplicate title 'python book'
+2025-11-17 19:41:21 INFO library: Search performed: title='python' author='None' category='None' -> 1 results
+2025-11-17 19:41:21 INFO library: Added book 'Python Programming' by 'Author' in category '科技'
+2025-11-17 19:41:21 INFO library: Search performed: title='python' author='None' category='None' -> 1 results
+2025-11-17 19:41:21 INFO library: Search performed: title='PYTHON' author='None' category='None' -> 1 results
+2025-11-17 19:41:21 INFO library: Search performed: title='Programming' author='None' category='None' -> 1 results
+2025-11-17 19:41:21 INFO library: Search performed: title='programming' author='None' category='None' -> 1 results
+2025-11-17 19:41:21 INFO library: Added book 'Test Book' by 'Author' in category '文学'
+2025-11-17 19:41:21 ERROR library: Add failed: duplicate title 'Test Book'
+2025-11-17 19:41:21 INFO library: Added user 'user1'
+2025-11-17 19:41:21 INFO library: User 'user1' borrowed 'Test Book'
+2025-11-17 19:41:21 ERROR library: Borrow failed: 'Test Book' not found or already borrowed (user='user1')
+2025-11-17 19:41:21 INFO library: User 'user1' returned 'Test Book'
+2025-11-17 19:41:21 ERROR library: Return failed: 'Test Book' not found or not borrowed (user='user1')
+2025-11-17 19:41:21 INFO library: Removed book 'Test Book'
+2025-11-17 19:41:21 ERROR library: Remove failed: 'Test Book' not found
+2025-11-17 19:41:21 INFO library: Added book 'Python Programming' by 'Author' in category '科技'
+2025-11-17 19:41:21 INFO library: Added book 'Java Programming' by 'Author' in category '科技'
+2025-11-17 19:41:21 INFO library: Added book 'Python Basics' by 'Author' in category '科技'
+2025-11-17 19:41:21 INFO library: Search performed: title='Python' author='None' category='None' -> 2 results
+2025-11-17 19:41:21 INFO library: Search performed: title='Programming' author='None' category='None' -> 2 results
+2025-11-17 19:41:21 INFO library: Search performed: title='Basic' author='None' category='None' -> 1 results
+2025-11-17 19:41:21 INFO library: Added book 'Book1' by 'Author1' in category 'categroy1'
+2025-11-17 19:41:21 INFO library: Added book 'Book2' by 'Author2' in category 'categroy2'
+2025-11-17 19:41:21 INFO library: Added user 'user1'
+2025-11-17 19:41:21 INFO library: User 'user1' borrowed 'Book1'
+2025-11-17 19:41:21 INFO library: User 'user1' returned 'Book1'
+2025-11-17 19:41:21 INFO library: Removed book 'Book2'
+2025-11-17 19:41:21 INFO library: Added book 'The Great Gatsby' by 'F. Scott Fitzgerald' in category '文学'
+2025-11-17 19:41:21 INFO library: Search performed: title='Gatsby' author='None' category='None' -> 1 results
+2025-11-17 19:41:21 INFO library: Added user 'default_user'
+2025-11-17 19:41:21 INFO library: Added book 'Test Book' by 'Author' in category 'science'
+2025-11-17 19:41:21 INFO library: Added user 'default_user'
+2025-11-17 19:41:21 INFO library: Added book 'Borrowable' by 'Writer' in category 'None'
+2025-11-17 19:41:21 INFO library: User 'default_user' borrowed 'Borrowable'
+2025-11-17 19:41:21 INFO library: User 'default_user' returned 'Borrowable'
+2025-11-17 19:41:21 INFO library: Added user 'default_user'
+2025-11-17 19:41:21 INFO library: Search performed: title='Nothing' author='None' category='None' -> 0 results
+2025-11-17 19:41:21 INFO library: Added user 'default_user'
+2025-11-17 19:41:21 INFO library: Added book 'Book1' by 'A1' in category 'None'
+2025-11-17 19:41:21 INFO library: Added book 'Book2' by 'A2' in category 'None'
+2025-11-17 19:41:21 INFO library: Search performed: title='Book' author='None' category='None' -> 2 results
+2025-11-17 19:41:21 INFO library: User 'default_user' borrowed 'Book1'
+2025-11-17 19:41:21 INFO library: Added user 'default_user'
+2025-11-17 19:41:21 INFO library: Added book '软件工程' by '徐浩然' in category '编程'
+2025-11-17 19:41:21 INFO library: Added book 'The Great Gatsby' by 'F. Scott Fitzgerald' in category '小说'
+2025-11-17 19:41:21 INFO library: Added user 'default_user'
+2025-11-17 19:41:21 INFO library: Added book 'Book A' by 'Author A' in category 'Fiction'
+2025-11-17 19:41:21 INFO library: Added book 'Book B' by 'Author B' in category 'Science'
+2025-11-17 19:41:21 INFO library: Added book 'Book C' by 'Author C' in category 'Fiction'
+2025-11-17 19:41:21 INFO library: Added user 'default_user'
+2025-11-17 19:41:21 INFO library: Added book 'DelBook' by 'AuthorD' in category '分类'
+2025-11-17 19:41:21 INFO library: Removed book 'DelBook'
+2025-11-17 19:41:21 INFO library: Added user 'default_user'
+2025-11-17 19:41:21 INFO library: Added book 'KeepBook' by 'AuthorK' in category '分类'
+2025-11-17 19:41:21 INFO library: Remove cancelled by user for 'KeepBook'
+2025-11-17 19:41:21 INFO library: Added book 'Test Book' by 'Test Author' in category '文学'
+2025-11-17 19:41:21 INFO library: Added book 'Duplicate' by 'Author' in category '文学'
+2025-11-17 19:41:21 ERROR library: Add failed: duplicate title 'Duplicate'
+2025-11-17 19:41:21 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:41:21 INFO library: Removed book 'Python Basics'
+2025-11-17 19:41:21 ERROR library: Remove failed: 'Non Existent' not found
+2025-11-17 19:41:21 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:41:21 INFO library: Search performed: title='Python' author='None' category='None' -> 1 results
+2025-11-17 19:41:21 INFO library: Search performed: title='Nothing' author='None' category='None' -> 0 results
+2025-11-17 19:41:21 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:41:21 INFO library: Added user 'user1'
+2025-11-17 19:41:21 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:41:21 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:41:21 INFO library: Added user 'user1'
+2025-11-17 19:41:21 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:41:21 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='user1')
+2025-11-17 19:41:21 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:41:21 INFO library: Added user 'user1'
+2025-11-17 19:41:21 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:41:21 INFO library: User 'user1' returned 'Python Basics'
+2025-11-17 19:41:21 INFO library: Added user 'user1'
+2025-11-17 19:41:21 ERROR library: Return failed: 'Some Book' not found or not borrowed (user='user1')
+2025-11-17 19:41:21 INFO library: Added book 'Available' by 'Author' in category '文学'
+2025-11-17 19:41:21 INFO library: Added book 'Log Book' by 'Logger' in category '测试'
+2025-11-17 19:41:21 ERROR library: Remove failed: 'Non Existent Book' not found
+2025-11-17 19:41:21 INFO library: Added book 'Book A' by 'Author A' in category '文学'
+2025-11-17 19:41:21 INFO library: Added book 'Book B' by 'Author B' in category '科技'
+2025-11-17 19:41:21 INFO library: Added book 'Book C' by 'Author C' in category '文学'
+2025-11-17 19:41:21 INFO library: Filter by category: '文学' -> 2 results
+2025-11-17 19:41:21 INFO library: Added book 'Book A' by 'Author A' in category '文学'
+2025-11-17 19:41:21 INFO library: Filter by category: '科技' -> 0 results
+2025-11-17 19:41:21 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:41:21 INFO library: Added user 'alice'
+2025-11-17 19:41:21 INFO library: User 'alice' borrowed 'Python Basics'
+2025-11-17 19:41:21 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:41:21 ERROR library: Borrow failed: user 'nonexistent_user' not found (title='Python Basics')
+2025-11-17 19:41:21 INFO library: Added book 'Persist Book' by 'Persist Author' in category '测试'
+2025-11-17 19:41:21 INFO library: Search performed: title='Persist' author='None' category='None' -> 1 results
+2025-11-17 19:44:06 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:44:06 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:44:06 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:44:06 INFO library: Added book 'New Book' by 'Dave' in category '神话'
+2025-11-17 19:44:06 INFO library: Search performed: title='New' author='None' category='None' -> 1 results
+2025-11-17 19:44:06 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:44:06 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:44:06 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:44:06 INFO library: Added book 'Temp Book' by 'Eve' in category '科技'
+2025-11-17 19:44:06 INFO library: Added user 'user1'
+2025-11-17 19:44:06 INFO library: User 'user1' borrowed 'Temp Book'
+2025-11-17 19:44:06 INFO library: User 'user1' returned 'Temp Book'
+2025-11-17 19:44:06 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:44:06 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:44:06 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:44:06 INFO library: Search performed: title='Python' author='None' category='None' -> 2 results
+2025-11-17 19:44:06 INFO library: Removed book 'Python Basics'
+2025-11-17 19:44:06 INFO library: Search performed: title='Python' author='None' category='None' -> 1 results
+2025-11-17 19:44:06 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:44:06 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:44:06 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:44:06 INFO library: Added user 'user1'
+2025-11-17 19:44:06 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:44:06 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='user1')
+2025-11-17 19:44:06 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:44:06 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:44:06 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:44:06 INFO library: Filter by category: '编程' -> 3 results
+2025-11-17 19:44:06 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:44:06 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:44:06 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:44:06 INFO library: Search performed: title='Python' author='Alice' category='编程' -> 1 results
+2025-11-17 19:44:06 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:44:06 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:44:06 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:44:06 INFO library: Search performed: title='Python' author='NonExistentAuthor' category='None' -> 0 results
+2025-11-17 19:44:06 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:44:06 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:44:06 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:44:06 INFO library: Added user 'alice'
+2025-11-17 19:44:06 INFO library: Added user 'bob'
+2025-11-17 19:44:06 INFO library: User 'alice' borrowed 'Python Basics'
+2025-11-17 19:44:06 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='bob')
+2025-11-17 19:44:06 INFO library: User 'alice' returned 'Python Basics'
+2025-11-17 19:44:06 INFO library: User 'bob' borrowed 'Python Basics'
+2025-11-17 19:44:06 INFO library: Added book 'Book!' by 'Author' in category '小说'
+2025-11-17 19:44:06 INFO library: Added book 'Book?' by 'Author' in category '小说'
+2025-11-17 19:44:06 INFO library: Search performed: title='Book!' author='None' category='None' -> 1 results
+2025-11-17 19:44:06 INFO library: Added book 'Book#$%^&*()' by 'Author' in category '文学'
+2025-11-17 19:44:06 INFO library: Search performed: title='#$%' author='None' category='None' -> 1 results
+2025-11-17 19:44:06 ERROR library: Add failed: title/author exceed max length (title=100, author=300)
+2025-11-17 19:44:06 INFO library: Added book 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' by 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB' in category 'CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC'
+2025-11-17 19:44:06 INFO library: Search performed: title='AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' author='None' category='None' -> 1 results
+2025-11-17 19:44:06 INFO library: Added book 'Python Book' by 'Author' in category '科技'
+2025-11-17 19:44:06 ERROR library: Add failed: duplicate title 'python book'
+2025-11-17 19:44:06 INFO library: Search performed: title='python' author='None' category='None' -> 1 results
+2025-11-17 19:44:06 INFO library: Added book 'Python Programming' by 'Author' in category '科技'
+2025-11-17 19:44:06 INFO library: Search performed: title='python' author='None' category='None' -> 1 results
+2025-11-17 19:44:06 INFO library: Search performed: title='PYTHON' author='None' category='None' -> 1 results
+2025-11-17 19:44:06 INFO library: Search performed: title='Programming' author='None' category='None' -> 1 results
+2025-11-17 19:44:06 INFO library: Search performed: title='programming' author='None' category='None' -> 1 results
+2025-11-17 19:44:06 INFO library: Added book 'Test Book' by 'Author' in category '文学'
+2025-11-17 19:44:06 ERROR library: Add failed: duplicate title 'Test Book'
+2025-11-17 19:44:06 INFO library: Added user 'user1'
+2025-11-17 19:44:06 INFO library: User 'user1' borrowed 'Test Book'
+2025-11-17 19:44:06 ERROR library: Borrow failed: 'Test Book' not found or already borrowed (user='user1')
+2025-11-17 19:44:06 INFO library: User 'user1' returned 'Test Book'
+2025-11-17 19:44:06 ERROR library: Return failed: 'Test Book' not found or not borrowed (user='user1')
+2025-11-17 19:44:06 INFO library: Removed book 'Test Book'
+2025-11-17 19:44:06 ERROR library: Remove failed: 'Test Book' not found
+2025-11-17 19:44:06 INFO library: Added book 'Python Programming' by 'Author' in category '科技'
+2025-11-17 19:44:06 INFO library: Added book 'Java Programming' by 'Author' in category '科技'
+2025-11-17 19:44:06 INFO library: Added book 'Python Basics' by 'Author' in category '科技'
+2025-11-17 19:44:06 INFO library: Search performed: title='Python' author='None' category='None' -> 2 results
+2025-11-17 19:44:06 INFO library: Search performed: title='Programming' author='None' category='None' -> 2 results
+2025-11-17 19:44:06 INFO library: Search performed: title='Basic' author='None' category='None' -> 1 results
+2025-11-17 19:44:06 INFO library: Added book 'Book1' by 'Author1' in category 'categroy1'
+2025-11-17 19:44:06 INFO library: Added book 'Book2' by 'Author2' in category 'categroy2'
+2025-11-17 19:44:06 INFO library: Added user 'user1'
+2025-11-17 19:44:06 INFO library: User 'user1' borrowed 'Book1'
+2025-11-17 19:44:06 INFO library: User 'user1' returned 'Book1'
+2025-11-17 19:44:06 INFO library: Removed book 'Book2'
+2025-11-17 19:44:06 INFO library: Added book 'The Great Gatsby' by 'F. Scott Fitzgerald' in category '文学'
+2025-11-17 19:44:06 INFO library: Search performed: title='Gatsby' author='None' category='None' -> 1 results
+2025-11-17 19:44:06 INFO library: Added user 'default_user'
+2025-11-17 19:44:06 INFO library: Added book 'Test Book' by 'Author' in category 'science'
+2025-11-17 19:44:06 INFO library: Added user 'default_user'
+2025-11-17 19:44:06 INFO library: Added book 'Borrowable' by 'Writer' in category 'None'
+2025-11-17 19:44:06 INFO library: User 'default_user' borrowed 'Borrowable'
+2025-11-17 19:44:06 INFO library: User 'default_user' returned 'Borrowable'
+2025-11-17 19:44:06 INFO library: Added user 'default_user'
+2025-11-17 19:44:06 INFO library: Search performed: title='Nothing' author='None' category='None' -> 0 results
+2025-11-17 19:44:06 INFO library: Added user 'default_user'
+2025-11-17 19:44:06 INFO library: Added book 'Book1' by 'A1' in category 'None'
+2025-11-17 19:44:06 INFO library: Added book 'Book2' by 'A2' in category 'None'
+2025-11-17 19:44:06 INFO library: Search performed: title='Book' author='None' category='None' -> 2 results
+2025-11-17 19:44:06 INFO library: User 'default_user' borrowed 'Book1'
+2025-11-17 19:44:06 INFO library: Added user 'default_user'
+2025-11-17 19:44:06 INFO library: Added book '软件工程' by '徐浩然' in category '编程'
+2025-11-17 19:44:06 INFO library: Added book 'The Great Gatsby' by 'F. Scott Fitzgerald' in category '小说'
+2025-11-17 19:44:06 INFO library: Added user 'default_user'
+2025-11-17 19:44:06 INFO library: Added book 'Book A' by 'Author A' in category 'Fiction'
+2025-11-17 19:44:06 INFO library: Added book 'Book B' by 'Author B' in category 'Science'
+2025-11-17 19:44:06 INFO library: Added book 'Book C' by 'Author C' in category 'Fiction'
+2025-11-17 19:44:06 INFO library: Added user 'default_user'
+2025-11-17 19:44:06 INFO library: Added book 'DelBook' by 'AuthorD' in category '分类'
+2025-11-17 19:44:06 INFO library: Removed book 'DelBook'
+2025-11-17 19:44:06 INFO library: Added user 'default_user'
+2025-11-17 19:44:06 INFO library: Added book 'KeepBook' by 'AuthorK' in category '分类'
+2025-11-17 19:44:06 INFO library: Remove cancelled by user for 'KeepBook'
+2025-11-17 19:44:06 INFO library: Added book 'Test Book' by 'Test Author' in category '文学'
+2025-11-17 19:44:06 INFO library: Added book 'Duplicate' by 'Author' in category '文学'
+2025-11-17 19:44:06 ERROR library: Add failed: duplicate title 'Duplicate'
+2025-11-17 19:44:06 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:44:06 INFO library: Removed book 'Python Basics'
+2025-11-17 19:44:06 ERROR library: Remove failed: 'Non Existent' not found
+2025-11-17 19:44:06 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:44:06 INFO library: Search performed: title='Python' author='None' category='None' -> 1 results
+2025-11-17 19:44:06 INFO library: Search performed: title='Nothing' author='None' category='None' -> 0 results
+2025-11-17 19:44:06 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:44:06 INFO library: Added user 'user1'
+2025-11-17 19:44:06 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:44:06 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:44:06 INFO library: Added user 'user1'
+2025-11-17 19:44:06 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:44:06 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='user1')
+2025-11-17 19:44:06 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:44:06 INFO library: Added user 'user1'
+2025-11-17 19:44:06 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:44:06 INFO library: User 'user1' returned 'Python Basics'
+2025-11-17 19:44:06 INFO library: Added user 'user1'
+2025-11-17 19:44:06 ERROR library: Return failed: 'Some Book' not found or not borrowed (user='user1')
+2025-11-17 19:44:06 INFO library: Added book 'Available' by 'Author' in category '文学'
+2025-11-17 19:44:06 INFO library: Added book 'Log Book' by 'Logger' in category '测试'
+2025-11-17 19:44:06 ERROR library: Remove failed: 'Non Existent Book' not found
+2025-11-17 19:44:06 INFO library: Added book 'Book A' by 'Author A' in category '文学'
+2025-11-17 19:44:06 INFO library: Added book 'Book B' by 'Author B' in category '科技'
+2025-11-17 19:44:06 INFO library: Added book 'Book C' by 'Author C' in category '文学'
+2025-11-17 19:44:06 INFO library: Filter by category: '文学' -> 2 results
+2025-11-17 19:44:06 INFO library: Added book 'Book A' by 'Author A' in category '文学'
+2025-11-17 19:44:06 INFO library: Filter by category: '科技' -> 0 results
+2025-11-17 19:44:06 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:44:06 INFO library: Added user 'alice'
+2025-11-17 19:44:06 INFO library: User 'alice' borrowed 'Python Basics'
+2025-11-17 19:44:06 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:44:06 ERROR library: Borrow failed: user 'nonexistent_user' not found (title='Python Basics')
+2025-11-17 19:44:06 INFO library: Added book 'Persist Book' by 'Persist Author' in category '测试'
+2025-11-17 19:44:06 INFO library: Search performed: title='Persist' author='None' category='None' -> 1 results
+2025-11-17 19:44:24 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:44:24 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:44:24 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:44:24 INFO library: Added book 'New Book' by 'Dave' in category '神话'
+2025-11-17 19:44:24 INFO library: Search performed: title='New' author='None' category='None' -> 1 results
+2025-11-17 19:44:24 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:44:24 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:44:24 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:44:24 INFO library: Added book 'Temp Book' by 'Eve' in category '科技'
+2025-11-17 19:44:24 INFO library: Added user 'user1'
+2025-11-17 19:44:24 INFO library: User 'user1' borrowed 'Temp Book'
+2025-11-17 19:44:24 INFO library: User 'user1' returned 'Temp Book'
+2025-11-17 19:44:24 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:44:24 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:44:24 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:44:24 INFO library: Search performed: title='Python' author='None' category='None' -> 2 results
+2025-11-17 19:44:24 INFO library: Removed book 'Python Basics'
+2025-11-17 19:44:24 INFO library: Search performed: title='Python' author='None' category='None' -> 1 results
+2025-11-17 19:44:24 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:44:24 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:44:24 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:44:24 INFO library: Added user 'user1'
+2025-11-17 19:44:24 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:44:24 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='user1')
+2025-11-17 19:44:24 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:44:24 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:44:24 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:44:24 INFO library: Filter by category: '编程' -> 3 results
+2025-11-17 19:44:24 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:44:24 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:44:24 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:44:24 INFO library: Search performed: title='Python' author='Alice' category='编程' -> 1 results
+2025-11-17 19:44:24 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:44:24 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:44:24 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:44:24 INFO library: Search performed: title='Python' author='NonExistentAuthor' category='None' -> 0 results
+2025-11-17 19:44:24 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:44:24 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:44:24 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:44:24 INFO library: Added user 'alice'
+2025-11-17 19:44:24 INFO library: Added user 'bob'
+2025-11-17 19:44:24 INFO library: User 'alice' borrowed 'Python Basics'
+2025-11-17 19:44:24 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='bob')
+2025-11-17 19:44:24 INFO library: User 'alice' returned 'Python Basics'
+2025-11-17 19:44:24 INFO library: User 'bob' borrowed 'Python Basics'
+2025-11-17 19:44:24 INFO library: Added book 'Book!' by 'Author' in category '小说'
+2025-11-17 19:44:24 INFO library: Added book 'Book?' by 'Author' in category '小说'
+2025-11-17 19:44:24 INFO library: Search performed: title='Book!' author='None' category='None' -> 1 results
+2025-11-17 19:44:24 INFO library: Added book 'Book#$%^&*()' by 'Author' in category '文学'
+2025-11-17 19:44:24 INFO library: Search performed: title='#$%' author='None' category='None' -> 1 results
+2025-11-17 19:44:24 ERROR library: Add failed: title/author exceed max length (title=100, author=300)
+2025-11-17 19:44:24 INFO library: Added book 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' by 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB' in category 'CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC'
+2025-11-17 19:44:24 INFO library: Search performed: title='AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' author='None' category='None' -> 1 results
+2025-11-17 19:44:24 INFO library: Added book 'Python Book' by 'Author' in category '科技'
+2025-11-17 19:44:24 ERROR library: Add failed: duplicate title 'python book'
+2025-11-17 19:44:24 INFO library: Search performed: title='python' author='None' category='None' -> 1 results
+2025-11-17 19:44:24 INFO library: Added book 'Python Programming' by 'Author' in category '科技'
+2025-11-17 19:44:24 INFO library: Search performed: title='python' author='None' category='None' -> 1 results
+2025-11-17 19:44:24 INFO library: Search performed: title='PYTHON' author='None' category='None' -> 1 results
+2025-11-17 19:44:24 INFO library: Search performed: title='Programming' author='None' category='None' -> 1 results
+2025-11-17 19:44:24 INFO library: Search performed: title='programming' author='None' category='None' -> 1 results
+2025-11-17 19:44:24 INFO library: Added book 'Test Book' by 'Author' in category '文学'
+2025-11-17 19:44:24 ERROR library: Add failed: duplicate title 'Test Book'
+2025-11-17 19:44:24 INFO library: Added user 'user1'
+2025-11-17 19:44:24 INFO library: User 'user1' borrowed 'Test Book'
+2025-11-17 19:44:24 ERROR library: Borrow failed: 'Test Book' not found or already borrowed (user='user1')
+2025-11-17 19:44:24 INFO library: User 'user1' returned 'Test Book'
+2025-11-17 19:44:24 ERROR library: Return failed: 'Test Book' not found or not borrowed (user='user1')
+2025-11-17 19:44:24 INFO library: Removed book 'Test Book'
+2025-11-17 19:44:24 ERROR library: Remove failed: 'Test Book' not found
+2025-11-17 19:44:24 INFO library: Added book 'Python Programming' by 'Author' in category '科技'
+2025-11-17 19:44:24 INFO library: Added book 'Java Programming' by 'Author' in category '科技'
+2025-11-17 19:44:24 INFO library: Added book 'Python Basics' by 'Author' in category '科技'
+2025-11-17 19:44:24 INFO library: Search performed: title='Python' author='None' category='None' -> 2 results
+2025-11-17 19:44:24 INFO library: Search performed: title='Programming' author='None' category='None' -> 2 results
+2025-11-17 19:44:24 INFO library: Search performed: title='Basic' author='None' category='None' -> 1 results
+2025-11-17 19:44:24 INFO library: Added book 'Book1' by 'Author1' in category 'categroy1'
+2025-11-17 19:44:24 INFO library: Added book 'Book2' by 'Author2' in category 'categroy2'
+2025-11-17 19:44:24 INFO library: Added user 'user1'
+2025-11-17 19:44:24 INFO library: User 'user1' borrowed 'Book1'
+2025-11-17 19:44:24 INFO library: User 'user1' returned 'Book1'
+2025-11-17 19:44:24 INFO library: Removed book 'Book2'
+2025-11-17 19:44:24 INFO library: Added book 'The Great Gatsby' by 'F. Scott Fitzgerald' in category '文学'
+2025-11-17 19:44:24 INFO library: Search performed: title='Gatsby' author='None' category='None' -> 1 results
+2025-11-17 19:44:24 INFO library: Added user 'default_user'
+2025-11-17 19:44:24 INFO library: Added book 'Test Book' by 'Author' in category 'science'
+2025-11-17 19:44:24 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:44:24 INFO library: Added book 'Borrowable' by 'Writer' in category 'None'
+2025-11-17 19:44:24 INFO library: User 'default_user' borrowed 'Borrowable'
+2025-11-17 19:44:24 INFO library: User 'default_user' returned 'Borrowable'
+2025-11-17 19:44:24 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:44:24 INFO library: Search performed: title='Nothing' author='None' category='None' -> 0 results
+2025-11-17 19:44:24 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:44:24 INFO library: Added book 'Book1' by 'A1' in category 'None'
+2025-11-17 19:44:24 INFO library: Added book 'Book2' by 'A2' in category 'None'
+2025-11-17 19:44:24 INFO library: Search performed: title='Book' author='None' category='None' -> 3 results
+2025-11-17 19:44:24 INFO library: User 'default_user' borrowed 'Book1'
+2025-11-17 19:44:24 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:44:24 INFO library: Added book '软件工程' by '徐浩然' in category '编程'
+2025-11-17 19:44:24 INFO library: Added book 'The Great Gatsby' by 'F. Scott Fitzgerald' in category '小说'
+2025-11-17 19:44:24 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:44:24 INFO library: Added book 'Book A' by 'Author A' in category 'Fiction'
+2025-11-17 19:44:24 INFO library: Added book 'Book B' by 'Author B' in category 'Science'
+2025-11-17 19:44:24 INFO library: Added book 'Book C' by 'Author C' in category 'Fiction'
+2025-11-17 19:44:24 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:44:24 INFO library: Added book 'DelBook' by 'AuthorD' in category '分类'
+2025-11-17 19:44:24 INFO library: Removed book 'DelBook'
+2025-11-17 19:44:24 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:44:24 INFO library: Added book 'KeepBook' by 'AuthorK' in category '分类'
+2025-11-17 19:44:24 INFO library: Remove cancelled by user for 'KeepBook'
+2025-11-17 19:44:24 INFO library: Added book 'Test Book' by 'Test Author' in category '文学'
+2025-11-17 19:44:24 INFO library: Added book 'Duplicate' by 'Author' in category '文学'
+2025-11-17 19:44:24 ERROR library: Add failed: duplicate title 'Duplicate'
+2025-11-17 19:44:24 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:44:24 INFO library: Removed book 'Python Basics'
+2025-11-17 19:44:24 ERROR library: Remove failed: 'Non Existent' not found
+2025-11-17 19:44:24 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:44:24 INFO library: Search performed: title='Python' author='None' category='None' -> 1 results
+2025-11-17 19:44:24 INFO library: Search performed: title='Nothing' author='None' category='None' -> 0 results
+2025-11-17 19:44:24 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:44:24 INFO library: Added user 'user1'
+2025-11-17 19:44:24 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:44:24 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:44:24 INFO library: Added user 'user1'
+2025-11-17 19:44:24 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:44:24 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='user1')
+2025-11-17 19:44:24 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:44:24 INFO library: Added user 'user1'
+2025-11-17 19:44:24 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:44:24 INFO library: User 'user1' returned 'Python Basics'
+2025-11-17 19:44:24 INFO library: Added user 'user1'
+2025-11-17 19:44:24 ERROR library: Return failed: 'Some Book' not found or not borrowed (user='user1')
+2025-11-17 19:44:24 INFO library: Added book 'Available' by 'Author' in category '文学'
+2025-11-17 19:44:24 INFO library: Added book 'Log Book' by 'Logger' in category '测试'
+2025-11-17 19:44:24 ERROR library: Remove failed: 'Non Existent Book' not found
+2025-11-17 19:44:24 INFO library: Added book 'Book A' by 'Author A' in category '文学'
+2025-11-17 19:44:24 INFO library: Added book 'Book B' by 'Author B' in category '科技'
+2025-11-17 19:44:24 INFO library: Added book 'Book C' by 'Author C' in category '文学'
+2025-11-17 19:44:24 INFO library: Filter by category: '文学' -> 2 results
+2025-11-17 19:44:24 INFO library: Added book 'Book A' by 'Author A' in category '文学'
+2025-11-17 19:44:24 INFO library: Filter by category: '科技' -> 0 results
+2025-11-17 19:44:24 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:44:24 INFO library: Added user 'alice'
+2025-11-17 19:44:24 INFO library: User 'alice' borrowed 'Python Basics'
+2025-11-17 19:44:24 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:44:24 ERROR library: Borrow failed: user 'nonexistent_user' not found (title='Python Basics')
+2025-11-17 19:44:24 INFO library: Added book 'Persist Book' by 'Persist Author' in category '测试'
+2025-11-17 19:44:24 INFO library: Search performed: title='Persist' author='None' category='None' -> 1 results
+2025-11-17 19:45:59 INFO library: Added book 'Python 基础教程' by 'Mark Lutz' in category '编程'
+2025-11-17 19:45:59 INFO library: Added book '深入理解计算机系统' by 'Randal E. Bryant' in category '计算机科学'
+2025-11-17 19:45:59 INFO library: Added user 'alice'
+2025-11-17 19:45:59 INFO library: Added user 'bob'
+2025-11-17 19:45:59 INFO library: User 'alice' borrowed 'Python 基础教程'
+2025-11-17 19:46:30 INFO library: Added book 'Go 语言实战' by 'William Kennedy' in category '编程'
+2025-11-17 19:46:30 INFO library: Added user 'charlie'
+2025-11-17 19:49:13 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:49:13 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:49:13 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:49:13 INFO library: Added book 'New Book' by 'Dave' in category '神话'
+2025-11-17 19:49:13 INFO library: Search performed: title='New' author='None' category='None' -> 1 results
+2025-11-17 19:49:13 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:49:13 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:49:13 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:49:13 INFO library: Added book 'Temp Book' by 'Eve' in category '科技'
+2025-11-17 19:49:13 INFO library: Added user 'user1'
+2025-11-17 19:49:13 INFO library: User 'user1' borrowed 'Temp Book'
+2025-11-17 19:49:13 INFO library: User 'user1' returned 'Temp Book'
+2025-11-17 19:49:13 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:49:13 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:49:13 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:49:13 INFO library: Search performed: title='Python' author='None' category='None' -> 2 results
+2025-11-17 19:49:13 INFO library: Removed book 'Python Basics'
+2025-11-17 19:49:13 INFO library: Search performed: title='Python' author='None' category='None' -> 1 results
+2025-11-17 19:49:13 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:49:13 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:49:13 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:49:13 INFO library: Added user 'user1'
+2025-11-17 19:49:13 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:49:13 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='user1')
+2025-11-17 19:49:13 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:49:13 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:49:13 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:49:13 INFO library: Filter by category: '编程' -> 3 results
+2025-11-17 19:49:13 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:49:13 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:49:13 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:49:13 INFO library: Search performed: title='Python' author='Alice' category='编程' -> 1 results
+2025-11-17 19:49:13 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:49:13 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:49:13 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:49:13 INFO library: Search performed: title='Python' author='NonExistentAuthor' category='None' -> 0 results
+2025-11-17 19:49:13 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:49:13 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:49:13 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:49:13 INFO library: Added user 'alice'
+2025-11-17 19:49:13 INFO library: Added user 'bob'
+2025-11-17 19:49:13 INFO library: User 'alice' borrowed 'Python Basics'
+2025-11-17 19:49:13 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='bob')
+2025-11-17 19:49:13 INFO library: User 'alice' returned 'Python Basics'
+2025-11-17 19:49:13 INFO library: User 'bob' borrowed 'Python Basics'
+2025-11-17 19:49:13 INFO library: Added book 'Book!' by 'Author' in category '小说'
+2025-11-17 19:49:13 INFO library: Added book 'Book?' by 'Author' in category '小说'
+2025-11-17 19:49:13 INFO library: Search performed: title='Book!' author='None' category='None' -> 1 results
+2025-11-17 19:49:13 INFO library: Added book 'Book#$%^&*()' by 'Author' in category '文学'
+2025-11-17 19:49:13 INFO library: Search performed: title='#$%' author='None' category='None' -> 1 results
+2025-11-17 19:49:13 ERROR library: Add failed: title/author exceed max length (title=100, author=300)
+2025-11-17 19:49:13 INFO library: Added book 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' by 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB' in category 'CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC'
+2025-11-17 19:49:13 INFO library: Search performed: title='AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' author='None' category='None' -> 1 results
+2025-11-17 19:49:13 INFO library: Added book 'Python Book' by 'Author' in category '科技'
+2025-11-17 19:49:13 ERROR library: Add failed: duplicate title 'python book'
+2025-11-17 19:49:13 INFO library: Search performed: title='python' author='None' category='None' -> 1 results
+2025-11-17 19:49:13 INFO library: Added book 'Python Programming' by 'Author' in category '科技'
+2025-11-17 19:49:13 INFO library: Search performed: title='python' author='None' category='None' -> 1 results
+2025-11-17 19:49:13 INFO library: Search performed: title='PYTHON' author='None' category='None' -> 1 results
+2025-11-17 19:49:13 INFO library: Search performed: title='Programming' author='None' category='None' -> 1 results
+2025-11-17 19:49:13 INFO library: Search performed: title='programming' author='None' category='None' -> 1 results
+2025-11-17 19:49:13 INFO library: Added book 'Test Book' by 'Author' in category '文学'
+2025-11-17 19:49:13 ERROR library: Add failed: duplicate title 'Test Book'
+2025-11-17 19:49:13 INFO library: Added user 'user1'
+2025-11-17 19:49:13 INFO library: User 'user1' borrowed 'Test Book'
+2025-11-17 19:49:13 ERROR library: Borrow failed: 'Test Book' not found or already borrowed (user='user1')
+2025-11-17 19:49:13 INFO library: User 'user1' returned 'Test Book'
+2025-11-17 19:49:13 ERROR library: Return failed: 'Test Book' not found or not borrowed (user='user1')
+2025-11-17 19:49:13 INFO library: Removed book 'Test Book'
+2025-11-17 19:49:13 ERROR library: Remove failed: 'Test Book' not found
+2025-11-17 19:49:13 INFO library: Added book 'Python Programming' by 'Author' in category '科技'
+2025-11-17 19:49:13 INFO library: Added book 'Java Programming' by 'Author' in category '科技'
+2025-11-17 19:49:13 INFO library: Added book 'Python Basics' by 'Author' in category '科技'
+2025-11-17 19:49:13 INFO library: Search performed: title='Python' author='None' category='None' -> 2 results
+2025-11-17 19:49:13 INFO library: Search performed: title='Programming' author='None' category='None' -> 2 results
+2025-11-17 19:49:13 INFO library: Search performed: title='Basic' author='None' category='None' -> 1 results
+2025-11-17 19:49:13 INFO library: Added book 'Book1' by 'Author1' in category 'categroy1'
+2025-11-17 19:49:13 INFO library: Added book 'Book2' by 'Author2' in category 'categroy2'
+2025-11-17 19:49:13 INFO library: Added user 'user1'
+2025-11-17 19:49:13 INFO library: User 'user1' borrowed 'Book1'
+2025-11-17 19:49:13 INFO library: User 'user1' returned 'Book1'
+2025-11-17 19:49:13 INFO library: Removed book 'Book2'
+2025-11-17 19:49:13 INFO library: Added book 'The Great Gatsby' by 'F. Scott Fitzgerald' in category '文学'
+2025-11-17 19:49:13 INFO library: Search performed: title='Gatsby' author='None' category='None' -> 1 results
+2025-11-17 19:49:13 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:49:13 ERROR library: Add failed: duplicate title 'Test Book'
+2025-11-17 19:49:13 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:49:13 ERROR library: Add failed: duplicate title 'Borrowable'
+2025-11-17 19:49:13 INFO library: User 'default_user' borrowed 'Borrowable'
+2025-11-17 19:49:13 INFO library: User 'default_user' returned 'Borrowable'
+2025-11-17 19:49:13 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:49:13 INFO library: Search performed: title='Nothing' author='None' category='None' -> 0 results
+2025-11-17 19:49:13 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:49:13 ERROR library: Add failed: duplicate title 'Book1'
+2025-11-17 19:49:13 ERROR library: Add failed: duplicate title 'Book2'
+2025-11-17 19:49:13 INFO library: Search performed: title='Book' author='None' category='None' -> 7 results
+2025-11-17 19:49:13 ERROR library: Borrow failed: 'Book1' not found or already borrowed (user='default_user')
+2025-11-17 19:49:13 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:49:13 ERROR library: Add failed: duplicate title '软件工程'
+2025-11-17 19:49:13 ERROR library: Add failed: duplicate title 'The Great Gatsby'
+2025-11-17 19:49:13 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:49:13 ERROR library: Add failed: duplicate title 'Book A'
+2025-11-17 19:49:13 ERROR library: Add failed: duplicate title 'Book B'
+2025-11-17 19:49:13 ERROR library: Add failed: duplicate title 'Book C'
+2025-11-17 19:49:13 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:49:13 INFO library: Added book 'DelBook' by 'AuthorD' in category '分类'
+2025-11-17 19:49:13 INFO library: Removed book 'DelBook'
+2025-11-17 19:49:13 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:49:13 ERROR library: Add failed: duplicate title 'KeepBook'
+2025-11-17 19:49:13 INFO library: Remove cancelled by user for 'KeepBook'
+2025-11-17 19:49:13 INFO library: Added book 'Test Book' by 'Test Author' in category '文学'
+2025-11-17 19:49:13 INFO library: Added book 'Duplicate' by 'Author' in category '文学'
+2025-11-17 19:49:13 ERROR library: Add failed: duplicate title 'Duplicate'
+2025-11-17 19:49:13 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:49:13 INFO library: Removed book 'Python Basics'
+2025-11-17 19:49:13 ERROR library: Remove failed: 'Non Existent' not found
+2025-11-17 19:49:13 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:49:13 INFO library: Search performed: title='Python' author='None' category='None' -> 1 results
+2025-11-17 19:49:13 INFO library: Search performed: title='Nothing' author='None' category='None' -> 0 results
+2025-11-17 19:49:13 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:49:13 INFO library: Added user 'user1'
+2025-11-17 19:49:13 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:49:13 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:49:13 INFO library: Added user 'user1'
+2025-11-17 19:49:13 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:49:13 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='user1')
+2025-11-17 19:49:13 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:49:13 INFO library: Added user 'user1'
+2025-11-17 19:49:13 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:49:13 INFO library: User 'user1' returned 'Python Basics'
+2025-11-17 19:49:13 INFO library: Added user 'user1'
+2025-11-17 19:49:13 ERROR library: Return failed: 'Some Book' not found or not borrowed (user='user1')
+2025-11-17 19:49:13 INFO library: Added book 'Available' by 'Author' in category '文学'
+2025-11-17 19:49:13 INFO library: Added book 'Log Book' by 'Logger' in category '测试'
+2025-11-17 19:49:13 ERROR library: Remove failed: 'Non Existent Book' not found
+2025-11-17 19:49:13 INFO library: Added book 'Book A' by 'Author A' in category '文学'
+2025-11-17 19:49:13 INFO library: Added book 'Book B' by 'Author B' in category '科技'
+2025-11-17 19:49:13 INFO library: Added book 'Book C' by 'Author C' in category '文学'
+2025-11-17 19:49:13 INFO library: Filter by category: '文学' -> 2 results
+2025-11-17 19:49:13 INFO library: Added book 'Book A' by 'Author A' in category '文学'
+2025-11-17 19:49:13 INFO library: Filter by category: '科技' -> 0 results
+2025-11-17 19:49:14 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:49:14 INFO library: Added user 'alice'
+2025-11-17 19:49:14 INFO library: User 'alice' borrowed 'Python Basics'
+2025-11-17 19:49:14 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:49:14 ERROR library: Borrow failed: user 'nonexistent_user' not found (title='Python Basics')
+2025-11-17 19:49:14 INFO library: Added book 'Persist Book' by 'Persist Author' in category '测试'
+2025-11-17 19:49:14 INFO library: Search performed: title='Persist' author='None' category='None' -> 1 results
+2025-11-17 19:49:46 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:49:46 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:49:46 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:49:46 INFO library: Added book 'New Book' by 'Dave' in category '神话'
+2025-11-17 19:49:46 INFO library: Search performed: title='New' author='None' category='None' -> 1 results
+2025-11-17 19:49:46 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:49:46 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:49:46 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:49:46 INFO library: Added book 'Temp Book' by 'Eve' in category '科技'
+2025-11-17 19:49:46 INFO library: Added user 'user1'
+2025-11-17 19:49:46 INFO library: User 'user1' borrowed 'Temp Book'
+2025-11-17 19:49:46 INFO library: User 'user1' returned 'Temp Book'
+2025-11-17 19:49:46 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:49:46 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:49:46 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:49:46 INFO library: Search performed: title='Python' author='None' category='None' -> 2 results
+2025-11-17 19:49:46 INFO library: Removed book 'Python Basics'
+2025-11-17 19:49:46 INFO library: Search performed: title='Python' author='None' category='None' -> 1 results
+2025-11-17 19:49:46 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:49:46 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:49:46 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:49:46 INFO library: Added user 'user1'
+2025-11-17 19:49:46 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:49:46 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='user1')
+2025-11-17 19:49:46 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:49:46 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:49:46 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:49:46 INFO library: Filter by category: '编程' -> 3 results
+2025-11-17 19:49:46 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:49:46 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:49:46 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:49:46 INFO library: Search performed: title='Python' author='Alice' category='编程' -> 1 results
+2025-11-17 19:49:46 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:49:46 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:49:46 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:49:46 INFO library: Search performed: title='Python' author='NonExistentAuthor' category='None' -> 0 results
+2025-11-17 19:49:46 INFO library: Added book 'Python Basics' by 'Alice' in category '编程'
+2025-11-17 19:49:46 INFO library: Added book 'Advanced Java' by 'Bob' in category '编程'
+2025-11-17 19:49:46 INFO library: Added book 'Python Advanced' by 'Charlie' in category '编程'
+2025-11-17 19:49:46 INFO library: Added user 'alice'
+2025-11-17 19:49:46 INFO library: Added user 'bob'
+2025-11-17 19:49:46 INFO library: User 'alice' borrowed 'Python Basics'
+2025-11-17 19:49:46 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='bob')
+2025-11-17 19:49:46 INFO library: User 'alice' returned 'Python Basics'
+2025-11-17 19:49:46 INFO library: User 'bob' borrowed 'Python Basics'
+2025-11-17 19:49:46 INFO library: Added book 'Book!' by 'Author' in category '小说'
+2025-11-17 19:49:46 INFO library: Added book 'Book?' by 'Author' in category '小说'
+2025-11-17 19:49:46 INFO library: Search performed: title='Book!' author='None' category='None' -> 1 results
+2025-11-17 19:49:46 INFO library: Added book 'Book#$%^&*()' by 'Author' in category '文学'
+2025-11-17 19:49:46 INFO library: Search performed: title='#$%' author='None' category='None' -> 1 results
+2025-11-17 19:49:46 ERROR library: Add failed: title/author exceed max length (title=100, author=300)
+2025-11-17 19:49:46 INFO library: Added book 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' by 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB' in category 'CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC'
+2025-11-17 19:49:46 INFO library: Search performed: title='AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' author='None' category='None' -> 1 results
+2025-11-17 19:49:46 INFO library: Added book 'Python Book' by 'Author' in category '科技'
+2025-11-17 19:49:46 ERROR library: Add failed: duplicate title 'python book'
+2025-11-17 19:49:46 INFO library: Search performed: title='python' author='None' category='None' -> 1 results
+2025-11-17 19:49:46 INFO library: Added book 'Python Programming' by 'Author' in category '科技'
+2025-11-17 19:49:46 INFO library: Search performed: title='python' author='None' category='None' -> 1 results
+2025-11-17 19:49:46 INFO library: Search performed: title='PYTHON' author='None' category='None' -> 1 results
+2025-11-17 19:49:46 INFO library: Search performed: title='Programming' author='None' category='None' -> 1 results
+2025-11-17 19:49:46 INFO library: Search performed: title='programming' author='None' category='None' -> 1 results
+2025-11-17 19:49:46 INFO library: Added book 'Test Book' by 'Author' in category '文学'
+2025-11-17 19:49:46 ERROR library: Add failed: duplicate title 'Test Book'
+2025-11-17 19:49:46 INFO library: Added user 'user1'
+2025-11-17 19:49:46 INFO library: User 'user1' borrowed 'Test Book'
+2025-11-17 19:49:46 ERROR library: Borrow failed: 'Test Book' not found or already borrowed (user='user1')
+2025-11-17 19:49:46 INFO library: User 'user1' returned 'Test Book'
+2025-11-17 19:49:46 ERROR library: Return failed: 'Test Book' not found or not borrowed (user='user1')
+2025-11-17 19:49:46 INFO library: Removed book 'Test Book'
+2025-11-17 19:49:46 ERROR library: Remove failed: 'Test Book' not found
+2025-11-17 19:49:46 INFO library: Added book 'Python Programming' by 'Author' in category '科技'
+2025-11-17 19:49:46 INFO library: Added book 'Java Programming' by 'Author' in category '科技'
+2025-11-17 19:49:46 INFO library: Added book 'Python Basics' by 'Author' in category '科技'
+2025-11-17 19:49:46 INFO library: Search performed: title='Python' author='None' category='None' -> 2 results
+2025-11-17 19:49:46 INFO library: Search performed: title='Programming' author='None' category='None' -> 2 results
+2025-11-17 19:49:46 INFO library: Search performed: title='Basic' author='None' category='None' -> 1 results
+2025-11-17 19:49:46 INFO library: Added book 'Book1' by 'Author1' in category 'categroy1'
+2025-11-17 19:49:46 INFO library: Added book 'Book2' by 'Author2' in category 'categroy2'
+2025-11-17 19:49:46 INFO library: Added user 'user1'
+2025-11-17 19:49:46 INFO library: User 'user1' borrowed 'Book1'
+2025-11-17 19:49:46 INFO library: User 'user1' returned 'Book1'
+2025-11-17 19:49:46 INFO library: Removed book 'Book2'
+2025-11-17 19:49:46 INFO library: Added book 'The Great Gatsby' by 'F. Scott Fitzgerald' in category '文学'
+2025-11-17 19:49:46 INFO library: Search performed: title='Gatsby' author='None' category='None' -> 1 results
+2025-11-17 19:49:46 INFO library: Added user 'default_user'
+2025-11-17 19:49:46 INFO library: Added book 'Test Book' by 'Author' in category 'science'
+2025-11-17 19:49:46 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:49:46 INFO library: Added book 'Borrowable' by 'Writer' in category 'None'
+2025-11-17 19:49:46 INFO library: User 'default_user' borrowed 'Borrowable'
+2025-11-17 19:49:46 INFO library: User 'default_user' returned 'Borrowable'
+2025-11-17 19:49:46 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:49:46 INFO library: Search performed: title='Nothing' author='None' category='None' -> 0 results
+2025-11-17 19:49:46 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:49:46 INFO library: Added book 'Book1' by 'A1' in category 'None'
+2025-11-17 19:49:46 INFO library: Added book 'Book2' by 'A2' in category 'None'
+2025-11-17 19:49:46 INFO library: Search performed: title='Book' author='None' category='None' -> 3 results
+2025-11-17 19:49:46 INFO library: User 'default_user' borrowed 'Book1'
+2025-11-17 19:49:46 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:49:46 INFO library: Added book '软件工程' by '徐浩然' in category '编程'
+2025-11-17 19:49:46 INFO library: Added book 'The Great Gatsby' by 'F. Scott Fitzgerald' in category '小说'
+2025-11-17 19:49:46 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:49:46 INFO library: Added book 'Book A' by 'Author A' in category 'Fiction'
+2025-11-17 19:49:46 INFO library: Added book 'Book B' by 'Author B' in category 'Science'
+2025-11-17 19:49:46 INFO library: Added book 'Book C' by 'Author C' in category 'Fiction'
+2025-11-17 19:49:46 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:49:46 INFO library: Added book 'DelBook' by 'AuthorD' in category '分类'
+2025-11-17 19:49:46 INFO library: Removed book 'DelBook'
+2025-11-17 19:49:46 ERROR library: Add user failed: user 'default_user' already exists
+2025-11-17 19:49:46 INFO library: Added book 'KeepBook' by 'AuthorK' in category '分类'
+2025-11-17 19:49:46 INFO library: Remove cancelled by user for 'KeepBook'
+2025-11-17 19:49:46 INFO library: Added book 'Test Book' by 'Test Author' in category '文学'
+2025-11-17 19:49:46 INFO library: Added book 'Duplicate' by 'Author' in category '文学'
+2025-11-17 19:49:46 ERROR library: Add failed: duplicate title 'Duplicate'
+2025-11-17 19:49:46 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:49:46 INFO library: Removed book 'Python Basics'
+2025-11-17 19:49:46 ERROR library: Remove failed: 'Non Existent' not found
+2025-11-17 19:49:46 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:49:46 INFO library: Search performed: title='Python' author='None' category='None' -> 1 results
+2025-11-17 19:49:46 INFO library: Search performed: title='Nothing' author='None' category='None' -> 0 results
+2025-11-17 19:49:46 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:49:46 INFO library: Added user 'user1'
+2025-11-17 19:49:46 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:49:46 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:49:46 INFO library: Added user 'user1'
+2025-11-17 19:49:46 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:49:46 ERROR library: Borrow failed: 'Python Basics' not found or already borrowed (user='user1')
+2025-11-17 19:49:46 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:49:46 INFO library: Added user 'user1'
+2025-11-17 19:49:46 INFO library: User 'user1' borrowed 'Python Basics'
+2025-11-17 19:49:46 INFO library: User 'user1' returned 'Python Basics'
+2025-11-17 19:49:46 INFO library: Added user 'user1'
+2025-11-17 19:49:46 ERROR library: Return failed: 'Some Book' not found or not borrowed (user='user1')
+2025-11-17 19:49:46 INFO library: Added book 'Available' by 'Author' in category '文学'
+2025-11-17 19:49:47 INFO library: Added book 'Log Book' by 'Logger' in category '测试'
+2025-11-17 19:49:47 ERROR library: Remove failed: 'Non Existent Book' not found
+2025-11-17 19:49:47 INFO library: Added book 'Book A' by 'Author A' in category '文学'
+2025-11-17 19:49:47 INFO library: Added book 'Book B' by 'Author B' in category '科技'
+2025-11-17 19:49:47 INFO library: Added book 'Book C' by 'Author C' in category '文学'
+2025-11-17 19:49:47 INFO library: Filter by category: '文学' -> 2 results
+2025-11-17 19:49:47 INFO library: Added book 'Book A' by 'Author A' in category '文学'
+2025-11-17 19:49:47 INFO library: Filter by category: '科技' -> 0 results
+2025-11-17 19:49:47 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:49:47 INFO library: Added user 'alice'
+2025-11-17 19:49:47 INFO library: User 'alice' borrowed 'Python Basics'
+2025-11-17 19:49:47 INFO library: Added book 'Python Basics' by 'Alice Author' in category '编程'
+2025-11-17 19:49:47 ERROR library: Borrow failed: user 'nonexistent_user' not found (title='Python Basics')
+2025-11-17 19:49:47 INFO library: Added book 'Persist Book' by 'Persist Author' in category '测试'
+2025-11-17 19:49:47 INFO library: Search performed: title='Persist' author='None' category='None' -> 1 results

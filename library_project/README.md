@@ -12,14 +12,19 @@
 ### 文件结构
 ```
 library_project/
-├── library.py          # 核心 Library 类: 书籍管理方法(add_book, remove_book 等)
-├── main.py             # 系统入口: 控制台 UI, 支持命令行交互(add, borrow 等)
-├── test_unit.py        # 单元测试: 隔离测试单个方法, 使用 fixtures 简化设置
-├── test_component.py   # 构件测试: 测试方法间交互(如 add -> search -> borrow)
-├── test_system.py      # 系统测试: 模拟用户输入, 端到端验证 UI 输出
-├── test_edge_cases.py  # 边界测试: 测试特殊输入和边界情况的处理
-├── requirements.txt    # 依赖: pip install -r requirements.txt
-└── README.md           # 本文档: 项目说明和任务指南
+├── library.py          # 核心 Library 类：SQLite-backed 书籍管理方法
+├── main.py             # 系统入口：控制台 UI，支持命令行交互
+├── conftest.py         # pytest 配置：db_lib 数据库测试夹具
+├── test_unit.py        # 单元测试：隔离测试单个方法，包括数据持久化测试
+├── test_component.py   # 构件测试：测试方法间交互
+├── test_system.py      # 系统测试：模拟用户输入，端到端验证
+├── test_edge_cases.py  # 边界测试：测试特殊输入和边界情况
+├── data/               # 数据文件夹：存放 SQLite 数据库文件（library.db）
+│   └── library.db      # SQLite 数据库（持久化存储所有数据）
+├── logs/               # 日志文件夹：存放操作日志
+│   └── library.log     # 操作日志（时间戳 + 级别 + 操作记录）
+├── requirements.txt    # 依赖：pip install -r requirements.txt
+└── README.md           # 本文档：项目说明和任务指南
 ```
 
 ### 核心功能示例
@@ -156,14 +161,48 @@ library_project/
 
 ### 已经实现的功能（截至 2025-11-17）
 
+- **SQLite 数据持久化存储**：使用 SQLite3 数据库替代内存存储，所有数据（书籍、用户、借阅关系）永久保存到 `data/library.db` 文件中。程序重启后数据仍然存在。数据库包含三个表：
+  - `books` 表：存储书籍信息（id、title、author、category、available）。
+  - `users` 表：存储用户信息（username）。
+  - `borrowed` 表：存储用户借阅关系（username、book_title），实现多对多关系。
+
+- **数据库架构与约束**：
+  - 使用 `CREATE TABLE IF NOT EXISTS` 确保幂等操作，避免重复创建。
+  - `title` 字段为 `UNIQUE` 约束，防止同名书籍重复添加。
+  - `borrowed` 表包含外键约束，确保参照完整性。
+  - 支持大小写不敏感的书名查询（使用 `lower()` 函数）。
+
+- **内存缓存与数据库同步**：
+  - 保留 `self.books`（list of dicts）和 `self.users`（dict of User）内存缓存以兼容现有测试。
+  - 所有修改操作同时更新数据库和内存缓存，确保一致性。
+  - 初始化时从数据库加载数据到内存（`_load_state()` 方法）。
+
+- **数据持久化配置**：
+  - `Library(db_path=None)` 时使用内存数据库（适合测试）。
+  - `Library(db_path="library.db")` 时自动在 `data/` 文件夹创建 `library.db` 文件。
+  - `main.py` 默认使用 `Library(db_path="library.db")` 实现生产环境数据持久化。
+
+- **测试数据持久化验证**：新增 `test_data_persistence` 测试用例，验证：
+  1. 创建库并添加数据。
+  2. 关闭库（提交事务）。
+  3. 重新打开同一数据库文件。
+  4. 验证数据仍然存在。
+
 - **核心书籍管理**: 实现 `Library` 的基本方法，包括 `add_book`, `remove_book`, `search_book`, `get_available_books` 和 `filter_by_category`，用于添加、移除、搜索和列出书籍。
+
 - **书籍分类支持**: 每本书包含 `category` 字段，`list`/`search` 输出会显示分类，支持按分类筛选。
+
 - **多词标题/作者与命令解析改进**: `main.py` 使用 `shlex.split` 来解析命令行输入，支持通过引号传递包含空格的标题或作者（例如: `add "The Test Book" "John Doe" 科技`）。
+
 - **用户系统**: 实现用户注册/登录功能（`add_user` / `login`），在 `Library.users` 中记录用户，并为每位用户维护借阅历史（`history` 命令可以查看）。
+
 - **按用户借阅/归还**: `borrow_book(username, title)` 与 `return_book(username, title)` 接口，借阅/归还会更新图书可用状态并写入该用户借阅记录。
+
 - **TTY 友好中文提示**: 提供 `maybe_translate` 机制，仅在交互终端（TTY）下将部分英文提示翻译为中文，保证自动化测试仍然接收英文原文，不被本地化破坏。
+
 - **安全的 I/O 处理**: 将对 `sys.stdout`/`sys.stderr` 的重绑定限制在 `if __name__ == "__main__"` 下，避免影响 pytest 的捕获行为，修复了导入时因 I/O 重绑定导致的测试异常。
-- **测试覆盖与新增用例**: 增加并更新了若干测试用例，覆盖用户借阅历史、多用户并发借阅以及系统交互流程（新增系统测试覆盖删除确认等场景）。在当前工作区上已运行全部测试，结果为: **44 passed**。
+
+- **测试覆盖与新增用例**: 增加并更新了若干测试用例，覆盖用户借阅历史、多用户并发借阅以及系统交互流程（新增系统测试覆盖删除确认等场景）。在当前工作区上已运行全部测试，结果为: **45 passed**。
 
 - **日志记录系统**: 使用 Python `logging` 在 `library_project/logs/library.log` 写入操作与错误日志（默认 INFO 级别）。记录项包括添加/删除/搜索/借阅/归还/用户管理及查看历史等操作，日志包含时间戳与级别，便于审计。
 
@@ -174,9 +213,16 @@ library_project/
 
 - **删除确认机制**: 删除操作现在支持交互确认：`remove <title>` 在 CLI 中会触发确认提示 `Confirm remove '<title>'? [Y/N]: `，仅当用户输入 `Y`/`yes`（不区分大小写）时才实际删除。库层的 `remove_book(title, prompt=False)` 保持可选的非交互调用，方便脚本/测试使用。
 
+- **详细代码注释与文档**：为 `library.py` 添加了详尽的中文注释，包括：
+  - 类和方法的完整文档字符串。
+  - 每个 SQL 操作的目的与参数说明。
+  - 数据库架构设计的解释。
+  - 内存缓存与数据库同步的设计理由。
+  - 错误处理和约束说明。
+
 ### 当前命令（CLI）
 
-在交互式 `python main.py` 中支持以下命令（含新增的 `logs` 与删除确认说明）：
+在交互式 `python main.py` 中支持以下命令（数据默认持久化保存到 `data/library.db`）：
 
 - `add <title> <author> [category]` : 添加一本书。支持用引号包含含空格的 `title` 或 `author`，`category` 可选。
 - `remove <title>` : 交互式删除（会要求确认）。
@@ -189,22 +235,6 @@ library_project/
 - `users` : 列出已注册用户。
 - `history` : 查看当前登录用户的借阅历史。
 - `logs [n|all]` : 查看日志文件（默认最近 200 行，或 `all` 显示全部）。
-- `quit` : 退出程序。
-
-### 当前命令（CLI）
-
-在交互式 `python main.py` 中支持以下命令：
-
-- `add <title> <author> [category]` : 添加一本书。支持用引号包含含空格的 `title` 或 `author`，`category` 可选。
-- `remove <title>` : 移除一本书（按标题匹配）。
-- `search <query>` : 按标题/作者模糊搜索。
-- `borrow <title>` : 当前已登录用户借阅指定书籍。
-- `return <title>` : 当前已登录用户归还指定书籍。
-- `list` : 列出所有可借图书（含分类信息）。
-- `add_user <username>` : 注册新用户。
-- `login <username>` : 切换/登录为指定用户（后续 borrow/return 使用该用户）。
-- `users` : 列出已注册用户。
-- `history <username?>` : 查看某用户的借阅历史；若不带参数则查看当前登录用户历史。
 - `quit` : 退出程序。
 
 示例：
@@ -223,8 +253,15 @@ python main.py
 
 ### 运行与测试
 
-- 运行交互式程序: `python main.py`
-- 运行全部测试: `pytest -v --tb=short`
+- 运行交互式程序（数据保存到 `data/library.db`）: `python main.py`
+- 运行全部测试（测试使用内存数据库）: `pytest -v --tb=short`
 
-当前测试状态（本地）：`44 passed`。
+当前测试状态（本地）：`45 passed`。
+
+### 数据存储说明
+
+- **生产环境**：运行 `python main.py` 时，所有数据自动存储到 `data/library.db`。重启程序后数据仍然保留。
+- **测试环境**：pytest 运行时通过 `conftest.py` 中的 `db_lib` fixture，为每个测试创建临时内存数据库，测试完成后自动清理，不影响生产数据。
+- **数据库位置**：绝对路径为 `f:\文件\SOFT\library_project\data\library.db`（Windows）或相应的项目路径。
+- **日志存储**：所有操作日志存储到 `logs/library.log`，包含时间戳和操作级别。
 

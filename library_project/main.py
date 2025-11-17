@@ -11,8 +11,11 @@ import shlex
 
 
 def main():
-    lib = Library()
+    # 使用 data 文件夹中的数据库进行持久化存储
+    lib = Library(db_path="library.db")  # 自动存储到 data/library.db
     print("欢迎来到简易图书馆系统！")
+    print("数据库存储位置: data/library.db")
+    print("日志文件位置: logs/library.log")
     print("命令列表：")
     print("  add <书名> <作者> [分类]     - 添加图书")
     print("  remove <书名>               - 删除图书")

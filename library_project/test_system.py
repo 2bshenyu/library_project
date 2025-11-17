@@ -122,3 +122,65 @@ def test_system_list_books_by_category(capsys):
     assert "- 'Book A' by Author A in Fiction" in output
     assert "- 'Book B' by Author B in Science" in output
     assert "- 'Book C' by Author C in Fiction" in output
+
+
+def test_system_remove_with_confirm(capsys):
+    """系统测试：删除时用户确认 Y，断言删除成功并从列表中不存在。"""
+    # 命令流：添加 -> remove -> list -> quit
+    inputs = [
+        'add "DelBook" "AuthorD" "分类"',
+        'remove DelBook',
+        'list',
+        'quit',
+    ]
+
+    # builtins.input 的返回序列：每次 main() 调用 input()，以及 remove_book 内的确认 input()
+    side_effect = [
+        inputs[0],           # add command
+        inputs[1],           # remove command
+        'Y',                 # confirm inside remove_book
+        inputs[2],           # list command
+        inputs[3],           # quit
+        EOFError,
+    ]
+
+    with patch("sys.stdin", StringIO("\n".join(inputs) + "\n")):
+        with patch("builtins.input", side_effect=side_effect):
+            main()
+
+        captured = capsys.readouterr()
+        output = captured.out
+
+    assert "Added 'DelBook' by AuthorD in 分类." in output
+    # 删除后，列表中不应该再包含 DelBook
+    assert "- 'DelBook' by AuthorD" not in output
+
+
+def test_system_remove_with_reject(capsys):
+    """系统测试：删除时用户拒绝 N，断言书籍仍能被 list 或 search 找到。"""
+    inputs = [
+        'add "KeepBook" "AuthorK" "分类"',
+        'remove KeepBook',
+        'list',
+        'quit',
+    ]
+
+    side_effect = [
+        inputs[0],
+        inputs[1],
+        'N',                 # reject inside remove_book
+        inputs[2],
+        inputs[3],
+        EOFError,
+    ]
+
+    with patch("sys.stdin", StringIO("\n".join(inputs) + "\n")):
+        with patch("builtins.input", side_effect=side_effect):
+            main()
+
+        captured = capsys.readouterr()
+        output = captured.out
+
+    assert "Added 'KeepBook' by AuthorK in 分类." in output
+    # 用户拒绝删除，书籍仍然应在列表中
+    assert "- 'KeepBook' by AuthorK" in output

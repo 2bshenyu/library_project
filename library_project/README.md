@@ -163,7 +163,33 @@ library_project/
 - **按用户借阅/归还**: `borrow_book(username, title)` 与 `return_book(username, title)` 接口，借阅/归还会更新图书可用状态并写入该用户借阅记录。
 - **TTY 友好中文提示**: 提供 `maybe_translate` 机制，仅在交互终端（TTY）下将部分英文提示翻译为中文，保证自动化测试仍然接收英文原文，不被本地化破坏。
 - **安全的 I/O 处理**: 将对 `sys.stdout`/`sys.stderr` 的重绑定限制在 `if __name__ == "__main__"` 下，避免影响 pytest 的捕获行为，修复了导入时因 I/O 重绑定导致的测试异常。
-- **测试覆盖与新增用例**: 增加并更新了若干测试用例，覆盖用户借阅历史和多用户并发借阅场景（如 `test_borrow_book_updates_user_history`, `test_borrow_book_unknown_user`, `test_two_users_borrow_same_book`）。在当前工作区上已运行全部测试，结果为: **40 passed**。
+- **测试覆盖与新增用例**: 增加并更新了若干测试用例，覆盖用户借阅历史、多用户并发借阅以及系统交互流程（新增系统测试覆盖删除确认等场景）。在当前工作区上已运行全部测试，结果为: **44 passed**。
+
+- **日志记录系统**: 使用 Python `logging` 在 `library_project/logs/library.log` 写入操作与错误日志（默认 INFO 级别）。记录项包括添加/删除/搜索/借阅/归还/用户管理及查看历史等操作，日志包含时间戳与级别，便于审计。
+
+- **CLI 日志查看命令**: 在 `main.py` 中新增 `logs [n|all]` 命令，用于查看 `logs/library.log`：
+   - `logs` 显示最近 200 行（默认）；
+   - `logs 100` 显示最近 100 行；
+   - `logs all` 显示全部日志内容。
+
+- **删除确认机制**: 删除操作现在支持交互确认：`remove <title>` 在 CLI 中会触发确认提示 `Confirm remove '<title>'? [Y/N]: `，仅当用户输入 `Y`/`yes`（不区分大小写）时才实际删除。库层的 `remove_book(title, prompt=False)` 保持可选的非交互调用，方便脚本/测试使用。
+
+### 当前命令（CLI）
+
+在交互式 `python main.py` 中支持以下命令（含新增的 `logs` 与删除确认说明）：
+
+- `add <title> <author> [category]` : 添加一本书。支持用引号包含含空格的 `title` 或 `author`，`category` 可选。
+- `remove <title>` : 交互式删除（会要求确认）。
+- `search <query>` : 按标题/作者模糊搜索。
+- `borrow <title>` : 当前已登录用户借阅指定书籍。
+- `return <title>` : 当前已登录用户归还指定书籍。
+- `list [category]` : 列出所有可借图书（含分类信息），可选按分类筛选。
+- `add_user <username>` : 注册新用户。
+- `login <username>` : 切换/登录为指定用户（后续 borrow/return 使用该用户）。
+- `users` : 列出已注册用户。
+- `history` : 查看当前登录用户的借阅历史。
+- `logs [n|all]` : 查看日志文件（默认最近 200 行，或 `all` 显示全部）。
+- `quit` : 退出程序。
 
 ### 当前命令（CLI）
 
@@ -199,4 +225,6 @@ python main.py
 
 - 运行交互式程序: `python main.py`
 - 运行全部测试: `pytest -v --tb=short`
+
+当前测试状态（本地）：`44 passed`。
 

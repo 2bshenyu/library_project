@@ -9,6 +9,7 @@
 import pytest
 
 from library import Library
+import logging
 
 
 @pytest.fixture
@@ -105,6 +106,23 @@ def test_get_available_books_one(empty_lib):
     """Unit test: One available book."""
     empty_lib.add_book("Available", "Author","文学")
     assert len(empty_lib.get_available_books()) == 1
+
+
+def test_add_book_logs_info(empty_lib, caplog):
+    """添加书籍成功时应记录 INFO 级别日志。"""
+    caplog.set_level(logging.INFO)
+    assert empty_lib.add_book("Log Book", "Logger", "测试")
+    # 检查是否存在 INFO 记录，且包含关键字
+    found = any(record.levelno == logging.INFO and "Added book" in record.getMessage() for record in caplog.records)
+    assert found, f"Expected INFO log with 'Added book', got: {[r.getMessage() for r in caplog.records]}"
+
+
+def test_remove_book_not_found_logs_error(empty_lib, caplog):
+    """删除不存在的书籍时应记录 ERROR 级别日志。"""
+    caplog.set_level(logging.ERROR)
+    assert not empty_lib.remove_book("Non Existent Book")
+    found_err = any(record.levelno == logging.ERROR and "Remove failed" in record.getMessage() for record in caplog.records)
+    assert found_err, f"Expected ERROR log with 'Remove failed', got: {[r.getMessage() for r in caplog.records]}"
 
 def test_filter_by_category_success(empty_lib):
     """测试按分类过滤书籍"""

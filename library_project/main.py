@@ -5,6 +5,7 @@
 """
 
 import sys
+import os
 from library import Library
 import shlex
 
@@ -24,6 +25,7 @@ def main():
     print("  users                       - 列出已注册用户")
     print("  history                     - 查看当前用户借阅历史")
     print("  quit                        - 退出系统")
+    print("  logs [n|all]                - 查看最近 n 行日志或全部日志（默认 200 行）")
     
     # 创建默认用户用于借阅和归还操作，并维护当前登录用户
     lib.add_user("default_user")
@@ -139,10 +141,11 @@ def main():
 
             elif action == "remove" and len(cmd) >= 2:
                 title = " ".join(cmd[1:])
-                if lib.remove_book(title):
+                # 调用 remove_book 时启用交互确认
+                if lib.remove_book(title, prompt=True):
                     print(f"Removed '{title}'.")
                 else:
-                    print(f"Error: '{title}' not found.")
+                    print(f"Error: '{title}' not found or removal cancelled.")
 
             elif action == "search" and len(cmd) >= 2:
                 # 支持：search title [author] [category]
@@ -202,6 +205,41 @@ def main():
                                 print(f"- '{book['title']}' by {book['author']}")
                     else:
                         print("No available books.")
+            elif action == "logs":
+                # 显示日志文件内容：logs [n] (显示最近 n 行)，n 可为 'all' 显示全部；默认 200 行
+                # 日志文件位于本模块同级目录的 logs/library.log
+                try:
+                    base_dir = os.path.dirname(__file__)
+                    log_path = os.path.join(base_dir, "logs", "library.log")
+                    if not os.path.exists(log_path):
+                        print("日志文件不存在。若尚未产生日志，请先执行一些操作。")
+                        continue
+
+                    # 解析参数
+                    n = 200
+                    if len(cmd) >= 2:
+                        if cmd[1].lower() == "all":
+                            n = None
+                        else:
+                            try:
+                                n = int(cmd[1])
+                            except ValueError:
+                                print("参数错误：请输入数字行数或 'all'。示例：logs 100 或 logs all")
+                                continue
+
+                    # 读取并显示内容
+                    with open(log_path, "r", encoding="utf-8") as f:
+                        if n is None:
+                            content = f.read()
+                            print(content)
+                        else:
+                            # tail last n lines
+                            lines = f.readlines()
+                            for line in lines[-n:]:
+                                print(line.rstrip())
+                except Exception as e:
+                    print(f"无法读取日志文件: {e}")
+                continue
             else:
                 print("Invalid command. Type 'quit' to exit.")
         
